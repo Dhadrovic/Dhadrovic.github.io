@@ -15,7 +15,7 @@ body {
 }
 
 a {
-  color: #66cc99;
+  color: #00b7eb;
   text-decoration: none;
 }
 
@@ -194,7 +194,7 @@ a {
   left: 0;
 }
 .profile .st0, .profile .st1 {
-  fill: #66cc99;
+  fill: #00b7eb;
 }
 
 .experience {
@@ -213,7 +213,7 @@ a {
   }
 }
 .experience h3.experience-title {
-  color: #66cc99;
+  color: #00b7eb;
   text-align: left;
   text-transform: uppercase;
   font-size: 1.2em;
@@ -282,7 +282,7 @@ a {
   padding-right: 8%;
 }
 .section-wrapper h3.section-title {
-  color: #66cc99;
+  color: #00b7eb;
   text-align: left;
   text-transform: uppercase;
   font-size: 1.2em;
@@ -304,7 +304,7 @@ a {
 .section-wrapper .skill-percentage::before {
   content: "";
   height: 6px;
-  background: #66cc99;
+  background: #00b7eb;
   position: absolute;
   margin-top: 3px;
   bottom: 0;
