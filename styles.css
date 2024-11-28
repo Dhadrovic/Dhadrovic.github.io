@@ -1,15 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Varela+Round);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1.5em;
 }
@@ -19,8 +22,9 @@ a {
   text-decoration: none;
 }
 
-.clearfix::after, .clearfix::before {
-  content: " ";
+.clearfix::after,
+.clearfix::before {
+  content: ' ';
   display: table;
 }
 
@@ -36,11 +40,21 @@ a {
 .resume-wrapper {
   position: relative;
   text-align: center;
-  height: 100%;
+  height: 100vh;
 }
 
 .container {
   min-height: 600px;
+}
+.left-container {
+  vertical-align: middle;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: auto;
+  justify-content: end;
+  gap: 10px;
 }
 
 .profile {
@@ -48,7 +62,10 @@ a {
   width: 40%;
   float: left;
   color: #9099a0;
+  padding-top: 16px !important;
+  padding-bottom: 0px !important;
 }
+
 @media (max-width: 850px) {
   .profile {
     width: 100%;
@@ -57,15 +74,25 @@ a {
 .profile .name-wrapper {
   float: left;
   width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 .profile h1 {
   font-size: 2.5em;
   text-align: left;
-  font-family: "Varela Round", sans-serif;
+  font-family: 'Varela Round', sans-serif;
   color: #4a4e51;
   text-transform: uppercase;
   line-height: 1em;
-  padding-top: 40px;
+}
+.profile h2 {
+  text-align: left;
+}
+.title-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 @media (max-width: 1200px) {
   .profile h1 {
@@ -143,7 +170,6 @@ a {
   }
 }
 .profile .contact-info {
-  margin-top: 100px;
   font-weight: 300;
 }
 @media (max-width: 1200px) {
@@ -172,8 +198,6 @@ a {
 .profile .contact-presentation {
   text-align: left;
   font-weight: 300;
-  margin-top: 100px;
-  margin-bottom: 100px;
 }
 @media (max-width: 1200px) {
   .profile .contact-presentation {
@@ -193,7 +217,8 @@ a {
   top: 0;
   left: 0;
 }
-.profile .st0, .profile .st1 {
+.profile .st0,
+.profile .st1 {
   fill: #00b7eb;
 }
 
@@ -204,9 +229,30 @@ a {
   position: relative;
   color: #9099a0;
   font-weight: 300;
-  min-height: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  overflow-y: scroll;
+  scrollbar-width: thin; /* Firefox - makes the scrollbar thinner */
+  scrollbar-color: #00b7eb #00b7eb
 }
+
+/* WebKit Browsers (Chrome, Safari, Edge) */
+.experience::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.experience::-webkit-scrollbar-track {
+  background: #00b7eb; /* Track color */
+}
+
+.experience::-webkit-scrollbar-thumb {
+  background: #00b7eb; /* Scrollbar thumb color */
+  border-radius: 4px; /* Rounded corners for thumb */
+}
+
+.experience::-webkit-scrollbar-thumb:hover {
+  background: #00b7eb; /* Thumb color on hover */
+}
+
 @media (max-width: 850px) {
   .experience {
     width: 100%;
@@ -216,9 +262,9 @@ a {
   color: #00b7eb;
   text-align: left;
   text-transform: uppercase;
-  font-size: 1.2em;
+  font-size: 1.3em;
   margin-bottom: 20px;
-  font-weight: 400;
+  font-weight: 500;
 }
 .experience .company-wrapper {
   width: 30%;
@@ -285,16 +331,16 @@ a {
   color: #00b7eb;
   text-align: left;
   text-transform: uppercase;
-  font-size: 1.2em;
+  font-size: 1.3em;
   margin-bottom: 20px;
-  font-weight: 400;
+  font-weight: 500;
 }
 .section-wrapper .skill-percentage {
   margin-bottom: 10px;
   position: relative;
 }
 .section-wrapper .skill-percentage::after {
-  content: "";
+  content: '';
   width: 100%;
   height: 6px;
   background: #4a4e51;
@@ -302,7 +348,7 @@ a {
   margin-top: 3px;
 }
 .section-wrapper .skill-percentage::before {
-  content: "";
+  content: '';
   height: 6px;
   background: #00b7eb;
   position: absolute;
@@ -312,37 +358,37 @@ a {
 .section-wrapper .skill-percentage:nth-child(1)::before {
   width: 80%;
   -webkit-animation: skill_1 0.6s ease;
-          animation: skill_1 0.6s ease;
+  animation: skill_1 0.6s ease;
 }
 .section-wrapper .skill-percentage:nth-child(2)::before {
   width: 90%;
   -webkit-animation: skill_2 0.6s ease;
-          animation: skill_2 0.6s ease;
+  animation: skill_2 0.6s ease;
 }
 .section-wrapper .skill-percentage:nth-child(3)::before {
   width: 50%;
   -webkit-animation: skill_3 0.6s ease;
-          animation: skill_3 0.6s ease;
+  animation: skill_3 0.6s ease;
 }
 .section-wrapper .skill-percentage:nth-child(4)::before {
   width: 60%;
   -webkit-animation: skill_4 0.6s ease;
-          animation: skill_4 0.6s ease;
+  animation: skill_4 0.6s ease;
 }
 .section-wrapper .skill-percentage:nth-child(5)::before {
   width: 70%;
   -webkit-animation: skill_5 0.6s ease;
-          animation: skill_5 0.6s ease;
+  animation: skill_5 0.6s ease;
 }
 .section-wrapper .skill-percentage:nth-child(6)::before {
   width: 70%;
   -webkit-animation: skill_6 0.6s ease;
-          animation: skill_6 0.6s ease;
+  animation: skill_6 0.6s ease;
 }
 .section-wrapper .skill-percentage:nth-child(7)::before {
   width: 70%;
   -webkit-animation: skill_6 0.6s ease;
-          animation: skill_6 0.6s ease;
+  animation: skill_6 0.6s ease;
 }
 
 @-webkit-keyframes skill_1 {
@@ -457,4 +503,27 @@ a {
   to {
     width: 70%;
   }
+}
+
+.skill-list-titles {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(125px, 1fr)
+  ); /* Adjust column width */
+  gap: 16px; /* Space between items */
+  list-style-type: none; /* Remove default bullets */
+  padding: 0;
+  margin: 0;
+}
+
+.skill-list-titles li {
+  background-color: #f9f9f9; /* Optional: Add a background for styling */
+  padding: 8px; /* Optional: Add padding */
+  border-radius: 4px; /* Optional: Round corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+}
+
+.company-description ul {
+  list-style: disc;
 }
