@@ -54,7 +54,7 @@ a {
   max-width: 600px;
   margin: auto;
   justify-content: end;
-  gap: 10px
+  gap: 10px;
 }
 
 .profile {
@@ -231,7 +231,28 @@ a {
   font-weight: 300;
   height: 100vh;
   overflow-y: scroll;
+  scrollbar-width: thin; /* Firefox - makes the scrollbar thinner */
+  scrollbar-color: #00b7eb #00b7eb
 }
+
+/* WebKit Browsers (Chrome, Safari, Edge) */
+.experience::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.experience::-webkit-scrollbar-track {
+  background: #00b7eb; /* Track color */
+}
+
+.experience::-webkit-scrollbar-thumb {
+  background: #00b7eb; /* Scrollbar thumb color */
+  border-radius: 4px; /* Rounded corners for thumb */
+}
+
+.experience::-webkit-scrollbar-thumb:hover {
+  background: #00b7eb; /* Thumb color on hover */
+}
+
 @media (max-width: 850px) {
   .experience {
     width: 100%;
@@ -486,7 +507,10 @@ a {
 
 .skill-list-titles {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr)); /* Adjust column width */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(125px, 1fr)
+  ); /* Adjust column width */
   gap: 16px; /* Space between items */
   list-style-type: none; /* Remove default bullets */
   padding: 0;
