@@ -229,10 +229,15 @@ a {
   position: relative;
   color: #9099a0;
   font-weight: 300;
-  height: 100vh;
-  overflow-y: scroll;
-  scrollbar-width: thin; /* Firefox - makes the scrollbar thinner */
-  scrollbar-color: #00b7eb #00b7eb
+}
+
+@media (min-width: 851px) {
+  .experience {
+    height: 100vh;
+    overflow-y: scroll;
+    scrollbar-width: thin; /* Firefox - makes the scrollbar thinner */
+    scrollbar-color: #00b7eb #00b7eb;
+  }
 }
 
 /* WebKit Browsers (Chrome, Safari, Edge) */
