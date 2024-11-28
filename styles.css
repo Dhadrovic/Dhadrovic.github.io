@@ -240,10 +240,6 @@ a {
   width: 8px; /* Width of the scrollbar */
 }
 
-.experience::-webkit-scrollbar-track {
-  background: #00b7eb; /* Track color */
-}
-
 .experience::-webkit-scrollbar-thumb {
   background: #00b7eb; /* Scrollbar thumb color */
   border-radius: 4px; /* Rounded corners for thumb */
